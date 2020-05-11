@@ -701,7 +701,7 @@ int caminho (Posicao inicial, Posicao final, Movimento mov[], int N) {
     else return i;
 }
 
-
+//teste 
 
 
 
