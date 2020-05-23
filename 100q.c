@@ -27,6 +27,32 @@ int length(LInt l){
 //Questao 2
 
 void freeL(LInt l){
+    while(l!=NULL){
+        LInt tmp = l;
+        l = l->prox;
+        free(tmp);
+    }    
+}
 
-    
+//Questao 3
+
+void imprimeL (LInt l){
+    while(l!=NULL){
+        printf("%d\n",l->valor);
+        l = l->prox;
+    }
+}
+
+//Questao 4
+
+LInt reverseL(LInt l) {
+    LInt prox = l->prox;
+    l->prox = NULL;
+    while(l!=NULL) {
+        LInt temp = prox->prox;
+        prox->prox = l;
+        l = prox;
+        prox = temp;
+    }
+    return l;
 }
